@@ -172,9 +172,22 @@ A identificação da origem é mantida como prática acadêmica, embora a CC0 n�
 - **Não carregue arquivos `.joblib` não confiáveis**: a desserialização desse formato pode executar código.
 - Somar valores rotulados como fraude não comprova dinheiro recuperado ou prejuízo evitado.
 
-## Autoria e contexto acadêmico
+## Autoria e contribuições
 
-Projeto desenvolvido no âmbito do **Projeto Integrador I — UFMS Digital**. Os créditos de equipe e as contribuições individuais devem ser preservados na versão pública; documentação e conteúdo produzidos em grupo não devem ser apresentados como autoria individual exclusiva.
+Este projeto foi desenvolvido no contexto da disciplina **Projeto Integrador I — Ciência de Dados, UFMS Digital**.
+
+### Equipe do projeto acadêmico
+
+- **Rebeca Dias Pegollo**
+- **Rubens Lima Araujo**
+- **Tiago Moreira Andrade Salviano**
+- **Vinicius Ilario**
+
+**Contribuições coletivas da equipe:** escolha da base de dados, planejamento da ação e definição do objetivo do projeto.
+
+**Implementação técnica realizada por Vinicius Ilario:** preparação e análise exploratória dos dados em Python; treinamento, comparação e avaliação dos modelos de Machine Learning; construção dos dashboards em Power BI; desenvolvimento do simulador Streamlit; configuração de execução com Docker; organização do repositório, versionamento no GitHub e documentação técnica.
+
+A distinção acima identifica as etapas informadas como coletivas e individuais, sem atribuir a concepção acadêmica do projeto exclusivamente ao responsável pela implementação técnica.
 
 ## Próximas melhorias
 
