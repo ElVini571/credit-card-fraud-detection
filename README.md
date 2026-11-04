@@ -34,7 +34,13 @@ Comparação entre limiares de decisão, precisão, recall, F1-score e volume de
 
 ![Página 3 — Simulação de Cenários](reports/figures/03%20-%20Simula%C3%A7%C3%A3o%20de%20Cen%C3%A1rios.png)
 
-**Aplicação interativa:** o simulador Streamlit permite escolher uma amostra da base, importar um CSV, ajustar o limiar e exportar alertas simulados. Ele funciona localmente com Python ou Docker; não há URL pública da aplicação.
+### 4. Simulador interativo em Streamlit
+
+A interface permite selecionar uma amostra da planilha, enviar um CSV, ajustar o limiar de alerta e exportar os resultados. Na captura abaixo, **100 transações de demonstração geraram 4 alertas** ao limiar de **0,90**. Esses números são apenas uma simulação com amostra da base e **não** devem ser confundidos com as métricas obtidas no conjunto de teste.
+
+![Interface do simulador Streamlit](reports/figures/simulador_streamlit.png)
+
+O aplicativo funciona **localmente** com Python ou Docker. Não há implantação pública, e nenhuma transação real é processada.
 
 ## Tecnologias
 
@@ -174,7 +180,6 @@ Projeto desenvolvido no âmbito do **Projeto Integrador I — UFMS Digital**. Os
 
 - Revisar origem temporal e disponibilidade das variáveis usadas pelo modelo.
 - Adicionar testes automatizados e pipeline de integração contínua.
-- Registrar uma captura da interface Streamlit para completar a demonstração visual.
 - Preparar uma configuração de hospedagem com controles adequados de privacidade e segurança, caso seja necessária no futuro.
 - Registrar a apresentação à comunidade e o feedback da ação de extensão.
 
