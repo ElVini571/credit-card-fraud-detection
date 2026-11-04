@@ -1,8 +1,3 @@
-numpy
-pandas
-openpyxl
+-r requirements-docker.txt
 matplotlib
 seaborn
-scikit-learn
-joblib
-streamlit
