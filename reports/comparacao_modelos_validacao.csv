@@ -1,0 +1,4 @@
+﻿modelo;average_precision
+Regressao Logistica;0.2725376771824652
+Random Forest;0.1457216409296845
+Baseline;0.017

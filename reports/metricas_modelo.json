@@ -1,0 +1,14 @@
+{
+    "modelo": "Regressao Logistica",
+    "limiar": 0.9,
+    "total_teste": 4000,
+    "acuracia": 0.96625,
+    "precisao": 0.2624113475177305,
+    "recall": 0.5441176470588235,
+    "f1_score": 0.35406698564593303,
+    "average_precision": 0.37268019465526847,
+    "verdadeiros_positivos": 37,
+    "falsos_positivos": 104,
+    "falsos_negativos": 31,
+    "verdadeiros_negativos": 3828
+}

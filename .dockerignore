@@ -1,0 +1,27 @@
+# O contexto de build nunca deve transmitir a base original.
+.git/
+.venv/
+venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+.env
+**/.env
+.streamlit/secrets.toml
+**/secrets.toml
+
+# Pastas desnecessárias na imagem.
+data/
+powerbi/
+notebooks/
+src/
+docs/
+reports/figures/
+reports/*.csv
+reports/metricas_modelo.json
+reports/predicoes_validacao.csv
+reports/predicoes_teste.csv
+*.pbix
+*.xlsx
+*.xls
+*.zip

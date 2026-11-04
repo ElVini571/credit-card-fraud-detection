@@ -1,0 +1,19 @@
+# Contêiner local do simulador de fraudes da UFMS.
+services:
+  simulador:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ufms-fraudes:local
+    ports:
+      # Acesso apenas neste computador; o Streamlit local pode usar 8501.
+      - "127.0.0.1:8502:8501"
+    volumes:
+      # A planilha permanece no Windows e NÃO é embutida na imagem.
+      - type: bind
+        source: ./data/raw
+        target: /app/data/raw
+        read_only: true
+        bind:
+          create_host_path: false
+    restart: "no"

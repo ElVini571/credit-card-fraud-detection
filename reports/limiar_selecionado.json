@@ -1,0 +1,7 @@
+{
+    "limiar": 0.9,
+    "criterio": "maior F1 na validacao",
+    "precisao_validacao": 0.2482758620689655,
+    "recall_validacao": 0.5294117647058824,
+    "f1_validacao": 0.3380281690140845
+}

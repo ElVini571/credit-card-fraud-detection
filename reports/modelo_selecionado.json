@@ -1,0 +1,5 @@
+{
+    "modelo": "Regressao Logistica",
+    "average_precision_validacao": 0.2725376771824652,
+    "average_precision_baseline": 0.017
+}

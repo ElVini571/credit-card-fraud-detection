@@ -1,0 +1,6 @@
+﻿auth_method;total;fraudes;taxa_pct
+3D Secure;5554;86;1.55
+Biometric;3093;24;0.78
+No Authentication;2388;106;4.44
+OTP;4792;75;1.57
+PIN;4173;48;1.15
