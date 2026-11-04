@@ -159,7 +159,13 @@ https://www.kaggle.com/datasets/uditjain13/credit-card-fraud-detection-2026
 
 Licença informada na fonte: **CC0 1.0 — Public Domain**: https://creativecommons.org/publicdomain/zero/1.0/
 
-A identificação da origem é mantida como prática acadêmica, embora a CC0 não exija atribuição. A licença dos **dados** não determina automaticamente a licença do **código, imagens, dashboard ou demais contribuições** do projeto.
+A identificação da origem é mantida como prática acadêmica, embora a CC0 não exija atribuição.
+
+### Licença do código
+
+O código-fonte e os arquivos de configuração técnica de autoria de **Vinícius Ilário Cordeiro** estão disponibilizados sob a **licença MIT**, conforme o arquivo [LICENSE](LICENSE). O arquivo especifica exatamente quais caminhos estão abrangidos por essa autorização.
+
+**A licença MIT não se aplica automaticamente** à base de dados (CC0), planilhas, modelo treinado, resultados gerados, dashboards Power BI, imagens, relatórios ou materiais de concepção e planejamento coletivo. Esses artefatos seguem suas próprias condições de uso.
 
 ## Limitações e uso responsável
 
