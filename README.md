@@ -12,6 +12,30 @@ Este projeto reúne análise exploratória, treinamento e comparação de classi
 
 A base estudada tem **20.000 transações**, **26 colunas**, sendo **339 registros rotulados como fraude** (**1,695%**). O conjunto foi dividido com estratificação em 60% treinamento, 20% validação e 20% teste.
 
+## Demonstração visual
+
+O dashboard foi desenvolvido no **Power BI** e contém três páginas. As imagens abaixo são capturas do relatório, não de uma aplicação hospedada.
+
+### 1. Panorama das transações
+
+Visão geral das 20.000 transações, frequência das fraudes e distribuição por diferentes características.
+
+![Página 1 — Panorama do Power BI](reports/figures/01%20-%20Panorama.png)
+
+### 2. Desempenho do modelo
+
+Avaliação do classificador no **conjunto de teste reservado** (4.000 registros), incluindo métricas e matriz de confusão.
+
+![Página 2 — Desempenho do Modelo](reports/figures/02%20-%20Desempenho%20do%20Modelo.png)
+
+### 3. Simulação de cenários
+
+Comparação entre limiares de decisão, precisão, recall, F1-score e volume de alertas usando **dados de validação**. A página não representa uma segunda avaliação do teste.
+
+![Página 3 — Simulação de Cenários](reports/figures/03%20-%20Simula%C3%A7%C3%A3o%20de%20Cen%C3%A1rios.png)
+
+**Aplicação interativa:** o simulador Streamlit permite escolher uma amostra da base, importar um CSV, ajustar o limiar e exportar alertas simulados. Ele funciona localmente com Python ou Docker; não há URL pública da aplicação.
+
 ## Tecnologias
 
 - **Python:** pandas, NumPy, matplotlib, scikit-learn, joblib
@@ -43,7 +67,7 @@ A Regressão Logística foi selecionada pela AP na validação. O limiar de aler
 | F1-score | **35,41%** |
 | Average Precision (AP) | **0,3727** |
 
-**Matriz de confusão:** VN = 3.828; FP = 104; FN = 31; VP = 37. O classificador identificou **37 das 68 fraudes reais** no teste e gerou **104 alertas falsos**. A acurácia, isoladamente, não é uma boa medida nesse conjunto desbalanceado.
+**Matriz de confusão:** VN = 3.828; FP = 104; FN = 31; VP = 37. O classificador identificou **37 das 68 fraudes reais** no teste e gerou **104 alertas falsos**. A acurácia, isoladamente, não é uma boa medida nesse conjunto desbalanceado: prever todas as transações como legítimas já produziria aproximadamente **98,31% de acurácia**, mas não detectaria nenhuma fraude.
 
 > Os números acima correspondem à execução documentada do projeto. Reproduções em outros ambientes devem usar as mesmas versões e o mesmo conjunto de dados para permitir comparação.
 
@@ -62,8 +86,31 @@ A Regressão Logística foi selecionada pela AP na validação. O limiar de aler
 ├── reports/                    # métricas, cenários e previsões
 │   └── figures/               # gráficos e capturas autorizadas
 ├── powerbi/                    # dashboard .pbix (quando incluído)
-└── docs/                       # metodologia e registros
 ```
+
+## Fluxo de análise e reprodução
+
+Os scripts ficam na pasta `src/` e devem ser executados a partir da **raiz do projeto**:
+
+| Ordem | Script | Objetivo |
+| --- | --- | --- |
+| 1 | `01_auditoria_base.py` | Verificar estrutura, valores ausentes, identificadores e desbalanceamento |
+| 2 | `03_analise_exploratoria.py` | Produzir tabelas e gráficos para compreender os dados |
+| 3 | `02_treinar_modelos.py` | Separar treino/validação/teste, preparar os atributos, comparar classificadores e salvar o modelo |
+| 4 | `04_cenarios_limiar.py` | Testar limiares na validação e registrar a escolha pelo F1-score |
+| 5 | `05_avaliacao_final.py` | Avaliar o modelo escolhido **uma vez** no teste reservado e gerar métricas e gráficos |
+
+Para reproduzir o treinamento, depois de instalar as dependências e a partir da pasta principal:
+
+```powershell
+.\.venv\Scripts\python.exe src/01_auditoria_base.py
+.\.venv\Scripts\python.exe src/03_analise_exploratoria.py
+.\.venv\Scripts\python.exe src/02_treinar_modelos.py
+.\.venv\Scripts\python.exe src/04_cenarios_limiar.py
+.\.venv\Scripts\python.exe src/05_avaliacao_final.py
+```
+
+**Atenção:** a reprodução pode sobrescrever o modelo, os relatórios e os resultados versionados. Faça uma cópia ou utilize uma branch separada para experimentos. O teste deve permanecer reservado para a avaliação final, não para escolher algoritmos ou limiares.
 
 ## Executar localmente com Python
 
@@ -127,7 +174,8 @@ Projeto desenvolvido no âmbito do **Projeto Integrador I — UFMS Digital**. Os
 
 - Revisar origem temporal e disponibilidade das variáveis usadas pelo modelo.
 - Adicionar testes automatizados e pipeline de integração contínua.
-- Preparar uma configuração de hospedagem com controles adequados de privacidade e segurança.
+- Registrar uma captura da interface Streamlit para completar a demonstração visual.
+- Preparar uma configuração de hospedagem com controles adequados de privacidade e segurança, caso seja necessária no futuro.
 - Registrar a apresentação à comunidade e o feedback da ação de extensão.
 
 ---
