@@ -124,11 +124,21 @@ Na pasta do projeto, crie um ambiente virtual e instale as dependências:
 
 ```powershell
 py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-docker.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
 Acesse `http://localhost:8501`.
+
+## Verificação automatizada de integridade
+
+O repositório inclui um teste leve com biblioteca padrão do Python que confere o formato e a consistência aritmética das métricas publicadas, a configuração do limiar e a presença dos principais arquivos de demonstração. A mesma verificação é executada pelo **GitHub Actions** a cada envio e também pode ser realizada localmente:
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+```
+
+Esse teste **não retreina o classificador**, não valida a qualidade estatística dos dados e não substitui a execução do Streamlit/Docker. Os artefatos de resultados devem continuar sendo reproduzidos com os scripts em `src/` quando necessário.
 
 ## Executar com Docker
 
