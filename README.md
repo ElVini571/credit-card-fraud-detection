@@ -178,14 +178,14 @@ Este projeto foi desenvolvido no contexto da disciplina **Projeto Integrador I �
 
 ### Equipe do projeto acadêmico
 
+- **Vinícius Ilário Cordeiro**
 - **Rebeca Dias Pegollo**
 - **Rubens Lima Araujo**
 - **Tiago Moreira Andrade Salviano**
-- **Vinicius Ilario**
 
 **Contribuições coletivas da equipe:** escolha da base de dados, planejamento da ação e definição do objetivo do projeto.
 
-**Implementação técnica realizada por Vinicius Ilario:** preparação e análise exploratória dos dados em Python; treinamento, comparação e avaliação dos modelos de Machine Learning; construção dos dashboards em Power BI; desenvolvimento do simulador Streamlit; configuração de execução com Docker; organização do repositório, versionamento no GitHub e documentação técnica.
+**Implementação técnica realizada por Vinícius Ilário Cordeiro:** preparação e análise exploratória dos dados em Python; treinamento, comparação e avaliação dos modelos de Machine Learning; construção dos dashboards em Power BI; desenvolvimento do simulador Streamlit; configuração de execução com Docker; organização do repositório, versionamento no GitHub e documentação técnica.
 
 A distinção acima identifica as etapas informadas como coletivas e individuais, sem atribuir a concepção acadêmica do projeto exclusivamente ao responsável pela implementação técnica.
 
